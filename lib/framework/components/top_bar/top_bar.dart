@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz/framework/components/top_bar/top_bar_cubit.dart';
+import 'package:quiz/framework/components/top_bar/widgets/clock.dart';
 import 'package:vrouter/vrouter.dart';
 
 /// The TopBar is our highly customized AppBar, which can be changed by using the [TopBarApi] via the [BuildContext.get] method.
@@ -15,6 +16,9 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                 onPressed: () => context.vRouter.to(state.backButtonPath!),
               )
             : null,
+        actions: <Widget>[
+          Clock(),
+        ],
       ),
     );
   }

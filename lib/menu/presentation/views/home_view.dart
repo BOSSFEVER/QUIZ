@@ -1,13 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:quiz/framework/components/view/abstract_view.dart';
+import 'package:quiz/framework/framework.dart';
 
-import '../widgets/home_view_button.dart';
+import '../widgets/big_splash_button/big_splash_button.dart';
 
 class HomeView extends AbstractView {
   const HomeView({super.key})
       : super(
-          title: "Somewhere",
+          title: "Home",
           showAppBar: true,
+          backButtonPath: null,
         );
 
   @override
@@ -17,11 +17,11 @@ class HomeView extends AbstractView {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                HomeViewButton(
+                BigSplashButton(
                     name: "CREATE", color: Colors.greenAccent, to: "/create"),
-                HomeViewButton(
+                BigSplashButton(
                     name: "HOST", color: Colors.amberAccent, to: "/host"),
-                HomeViewButton(
+                BigSplashButton(
                     name: "JOIN", color: Colors.cyanAccent, to: "/join"),
               ]),
         ),

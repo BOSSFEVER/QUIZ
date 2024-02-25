@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:quiz/framework/framework.dart';
 
 abstract class AbstractView extends StatelessWidget {
   Widget? get mobile;
@@ -7,17 +7,26 @@ abstract class AbstractView extends StatelessWidget {
 
   Widget get desktop;
 
+  final String? backButtonPath;
+
   final bool showAppBar;
   final String title;
 
   const AbstractView({
     required this.showAppBar,
     required this.title,
+    required this.backButtonPath,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    context.get<TopBarApi>().update(
+          title: title,
+          visible: showAppBar,
+          backButtonPath: backButtonPath,
+        );
+
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < 600 && mobile != null) {

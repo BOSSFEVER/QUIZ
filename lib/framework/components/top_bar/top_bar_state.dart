@@ -1,7 +1,7 @@
 part of 'top_bar_cubit.dart';
 
 @immutable
-class TopBarState {
+class TopBarState extends Equatable {
   final String title;
   final bool visible;
   final String? backButtonPath;
@@ -23,4 +23,7 @@ class TopBarState {
       backButtonPath: backButtonPath,
     );
   }
+
+  @override
+  List<Object?> get props => [title, visible, backButtonPath];
 }

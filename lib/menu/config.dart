@@ -1,62 +1,36 @@
 import 'package:quiz/framework/framework.dart';
+import 'package:quiz/menu/presentation/views/create_view.dart';
 import 'package:quiz/menu/presentation/views/home_view.dart';
+import 'package:quiz/menu/presentation/views/host_view.dart';
+import 'package:quiz/menu/presentation/views/join_view.dart';
 import 'package:vrouter/vrouter.dart';
+
+class Routes {
+  static const String HOME = "/home";
+  static const String CREATE = "/create";
+  static const String JOIN = "/join";
+  static const String HOST = "/host";
+}
 
 void init() {
   FrameworkRouter.addRoutes(
     [
       VWidget(
-        path: "/home",
+        path: Routes.HOME,
         widget: const HomeView(),
       ),
       VWidget(
-        path: "/create",
-        widget: const SimplePage(),
+        path: Routes.CREATE,
+        widget: const CreateView(),
       ),
       VWidget(
-        path: "/host",
-        widget: Container(
-          color: Colors.green.shade200,
-          child: const Text("Hey"),
-        ),
+        path: Routes.HOST,
+        widget: const HostView(),
       ),
       VWidget(
-        path: "/join",
-        widget: Container(
-          color: Colors.blue.shade200,
-          child: const Text("Hey"),
-        ),
+        path: Routes.JOIN,
+        widget: const JoinView(),
       ),
     ],
   );
-}
-
-class SimplePage extends StatelessWidget {
-  const SimplePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    context.get<TopBarApi>().update(
-          title: "Create",
-          visible: true,
-          backButtonPath: "/home",
-        );
-
-    ;
-
-    return Container(
-      color: Colors.red.shade200,
-      child: Builder(builder: (context) {
-        WidgetsBinding.instance.addPostFrameCallback(
-          (_) => showDialog(
-              builder: (context) => Dialog(
-                    child:
-                        Container(color: Colors.red, width: 500, height: 400),
-                  ),
-              context: context),
-        );
-        return Text("Hey");
-      }),
-    );
-  }
 }

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vrouter/vrouter.dart';
 
-import 'home_view_button_cubit.dart';
+import 'big_splash_button_cubit.dart';
 
-class HomeViewButton extends StatelessWidget {
+class BigSplashButton extends StatelessWidget {
   final String name;
   final Color color;
   final String to;
 
-  const HomeViewButton(
+  const BigSplashButton(
       {super.key, required this.name, required this.color, required this.to});
 
   @override
@@ -17,12 +17,12 @@ class HomeViewButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(32),
       child: BlocProvider(
-        create: (context) => HomeViewButtonCubit(),
-        child: BlocBuilder<HomeViewButtonCubit, HomeViewButtonState>(
+        create: (context) => BigSplashButtonCubit(),
+        child: BlocBuilder<BigSplashButtonCubit, BigSplashButtonState>(
           builder: (context, state) => InkWell(
             onHover: (hovering) => hovering
-                ? context.read<HomeViewButtonCubit>().onHover()
-                : context.read<HomeViewButtonCubit>().onNormal(),
+                ? context.read<BigSplashButtonCubit>().onHover()
+                : context.read<BigSplashButtonCubit>().onNormal(),
             onTap: () => context.vRouter.to(to),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 500),

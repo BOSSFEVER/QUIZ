@@ -18,3 +18,5 @@ part 'api/api.dart';
 part 'components/top_bar/top_bar_api.dart';
 
 part 'router/router.dart';
+
+part 'components/view/abstract_view.dart';

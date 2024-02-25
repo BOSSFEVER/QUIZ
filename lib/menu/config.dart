@@ -1,10 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:quiz/core/framework/top_bar/top_bar_api.dart';
-import 'package:quiz/core/router.dart';
+import 'package:quiz/framework/framework.dart';
 import 'package:quiz/menu/presentation/views/home_view.dart';
 import 'package:vrouter/vrouter.dart';
-
-import '../core/framework/top_bar/top_bar_cubit.dart';
 
 void init() {
   FrameworkRouter.addRoutes(
@@ -15,7 +11,7 @@ void init() {
       ),
       VWidget(
         path: "/create",
-        widget: SimplePage(),
+        widget: const SimplePage(),
       ),
       VWidget(
         path: "/host",

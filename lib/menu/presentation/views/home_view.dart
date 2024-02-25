@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz/core/framework/view/abstract_view.dart';
+import 'package:quiz/framework/components/view/abstract_view.dart';
 
 import '../widgets/home_view_button.dart';
 

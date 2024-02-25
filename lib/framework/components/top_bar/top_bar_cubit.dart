@@ -1,4 +1,5 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quiz/framework/framework.dart';
 import 'package:meta/meta.dart';
 
 part 'top_bar_state.dart';
@@ -33,18 +34,4 @@ class TopBarCubit extends Cubit<TopBarState> implements TopBarApi {
       backButtonPath: backButtonPath,
     ));
   }
-}
-
-abstract class TopBarApi {
-  void setTitle(String title);
-
-  void setVisible(bool visible);
-
-  void setBackButtonPath(String backButtonPath);
-
-  void update({
-    String? title,
-    bool? visible,
-    String? backButtonPath,
-  });
 }

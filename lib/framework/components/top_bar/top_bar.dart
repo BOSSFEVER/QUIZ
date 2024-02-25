@@ -11,9 +11,8 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
       builder: (BuildContext context, state) => AppBar(
         title: Text(state.title),
         leading: state.backButtonPath != null
-            ? ElevatedButton(
+            ? BackButton(
                 onPressed: () => context.vRouter.to(state.backButtonPath!),
-                child: const Text("Back"),
               )
             : null,
       ),

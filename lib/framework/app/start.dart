@@ -11,9 +11,14 @@ class Start extends StatelessWidget {
   Widget build(BuildContext context) {
     return ApiInjection(
       child: VRouter(
-        builder: (context, child) => ScaffoldWrapper(child: child),
         initialUrl: FrameworkRouter.getInitialUrl(),
-        routes: FrameworkRouter.getRoutes(),
+        routes: [
+          VNester(
+            path: null,
+            nestedRoutes: FrameworkRouter.getRoutes(),
+            widgetBuilder: (child) => ScaffoldWrapper(child: child),
+          ),
+        ],
         debugShowCheckedModeBanner: false,
         title: 'BOSSFEVER QUIZ',
         theme: ThemeData(

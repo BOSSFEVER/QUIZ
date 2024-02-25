@@ -1,44 +1,20 @@
-import 'package:flutter/material.dart';
+import 'package:quiz/core/exceptions/stupid_developer_exception.dart';
+import 'package:vrouter/vrouter.dart';
 
-import 'package:go_router/go_router.dart';
-import 'package:quiz/core/AbstractView.dart';
+class FrameworkRouter {
+  static List<VRouteElement> routes = <VRouteElement>[];
+  static bool done = false;
 
-import 'package:quiz/menu/presentation/views/HomeView.dart';
+  static addRoutes(List<VRouteElement> routes) {
+    if (done) {
+      throw StupidDeveloperException(
+          "Do not create routes after the app is loaded");
+    }
+    FrameworkRouter.routes.addAll(routes);
+  }
 
-// GoRouter configuration
-final router = GoRouter(
-  initialLocation: '/',
-  routes: [
-    ShellRoute(
-      builder: (BuildContext context, GoRouterState state, Widget child) {
-        return child;
-      },
-      routes: [
-        GoRoute(
-            path: '/',
-            builder: (context, state) => const HomeView(),
-            routes: [
-              GoRoute(
-                path: 'create',
-                builder: (context, state) => AbstractView(
-                  desktop: Material(child: const Text("Hey Boy")),
-                  appBar: true,
-                ),
-              ),
-              GoRoute(
-                path: 'play',
-                builder: (context, state) => const Placeholder(),
-              ),
-              GoRoute(
-                path: 'join',
-                builder: (context, state) => const Placeholder(),
-              ),
-              GoRoute(
-                path: 'settings',
-                builder: (context, state) => const Placeholder(),
-              ),
-            ]),
-      ],
-    )
-  ],
-);
+  static List<VRouteElement> getRoutes() {
+    done = true;
+    return routes;
+  }
+}

@@ -7,7 +7,7 @@ class CreateView extends AbstractView {
       : super(
           title: "Create",
           showAppBar: true,
-          backButtonPath: Routes.HOME,
+          backButtonPath: Routes.home,
         );
 
   @override

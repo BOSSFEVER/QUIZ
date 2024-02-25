@@ -28,7 +28,7 @@ class Start extends StatelessWidget {
           useMaterial3: true,
         ),
         transitionDuration: const Duration(milliseconds: 100),
-        reverseTransitionDuration: const Duration(seconds: 100),
+        reverseTransitionDuration: const Duration(milliseconds: 100),
         buildTransition: (anim1, anim2, child) =>
             FadeTransition(opacity: anim1, child: child),
       ),

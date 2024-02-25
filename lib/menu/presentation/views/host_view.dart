@@ -7,7 +7,7 @@ class HostView extends AbstractView {
       : super(
           title: "Host",
           showAppBar: true,
-          backButtonPath: Routes.HOME,
+          backButtonPath: Routes.home,
         );
 
   @override

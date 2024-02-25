@@ -10,14 +10,9 @@ abstract class Application {
   /// This method is run before the app starts.
   void init();
 
-  /// This method is run after the app has ended execution.
-  void exit();
-
   void start() {
     init();
 
     runApp(const Start());
-
-    exit();
   }
 }

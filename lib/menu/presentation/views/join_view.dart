@@ -7,7 +7,7 @@ class JoinView extends AbstractView {
       : super(
           title: "Join",
           showAppBar: true,
-          backButtonPath: Routes.HOME,
+          backButtonPath: Routes.home,
         );
 
   @override

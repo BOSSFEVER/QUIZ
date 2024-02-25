@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quiz/core/framework/top_bar/top_bar.dart';
-import 'package:quiz/core/framework/top_bar/top_bar_cubit.dart';
+import 'package:quiz/framework/components/top_bar/top_bar.dart';
+import 'package:quiz/framework/components/top_bar/top_bar_cubit.dart';
 
+/// The sole and only purpose of this class is to hide or show the [TopBar] depending on the configuration.
 class ScaffoldWrapper extends StatelessWidget {
   final Widget child;
 

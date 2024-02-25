@@ -1,5 +1,4 @@
-import 'package:quiz/core/exceptions/stupid_developer_exception.dart';
-import 'package:vrouter/vrouter.dart';
+part of 'package:quiz/framework/framework.dart';
 
 class FrameworkRouter {
   static List<VRouteElement> routes = <VRouteElement>[];
@@ -16,5 +15,9 @@ class FrameworkRouter {
   static List<VRouteElement> getRoutes() {
     done = true;
     return routes;
+  }
+
+  static String getInitialUrl() {
+    return "/home";
   }
 }

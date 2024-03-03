@@ -1,4 +1,5 @@
-part of 'package:quiz/framework/framework.dart';
+import 'package:flutter/material.dart';
+import 'package:quiz/framework/app/start.dart';
 
 /// Extend this class and implement the [init] and [exit] methods.
 /// After that, instantiate this class `Application()` and the app will start.

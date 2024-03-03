@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:quiz/framework/api/api_injection.dart';
+import 'package:quiz/framework/router/router.dart';
 import 'package:quiz/framework/components/view/scaffold_wrapper.dart';
-import 'package:quiz/framework/framework.dart';
 import 'package:vrouter/vrouter.dart';
 
 class Start extends StatelessWidget {

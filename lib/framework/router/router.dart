@@ -1,4 +1,5 @@
-part of 'package:quiz/framework/framework.dart';
+import 'package:vrouter/vrouter.dart';
+import 'package:quiz/framework/exceptions/stupid_developer_exception.dart';
 
 class FrameworkRouter {
   static List<VRouteElement> routes = <VRouteElement>[];

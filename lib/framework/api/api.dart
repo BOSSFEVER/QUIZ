@@ -1,4 +1,8 @@
-part of 'package:quiz/framework/framework.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../components/top_bar/top_bar_api.dart';
+import '../components/top_bar/top_bar_cubit.dart';
+import '../exceptions/stupid_developer_exception.dart';
 
 extension ApiContextExtension on BuildContext {
   T get<T>() {

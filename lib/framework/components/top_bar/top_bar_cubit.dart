@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quiz/framework/framework.dart';
-import 'package:meta/meta.dart';
+import 'package:quiz/framework/components/top_bar/top_bar_api.dart';
 
 part 'top_bar_state.dart';
 

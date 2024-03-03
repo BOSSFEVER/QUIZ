@@ -16,7 +16,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                 onPressed: () => context.vRouter.to(state.backButtonPath!),
               )
             : null,
-        actions: <Widget>[
+        actions: const <Widget>[
           Clock(),
         ],
       ),

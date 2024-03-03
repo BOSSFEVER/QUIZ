@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/framework/framework.dart';
 
-import '../../config.dart';
+import '../../routes.dart';
 
 class JoinView extends AbstractView {
   const JoinView({super.key})

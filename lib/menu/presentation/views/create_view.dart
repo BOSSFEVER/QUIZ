@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/framework/framework.dart';
-
-import '../../config.dart';
+import '../../routes.dart';
 
 class CreateView extends AbstractView {
   const CreateView({super.key})

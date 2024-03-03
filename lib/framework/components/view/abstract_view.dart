@@ -1,4 +1,7 @@
-part of 'package:quiz/framework/framework.dart';
+import 'package:flutter/material.dart';
+import 'package:quiz/framework/api/api.dart';
+
+import '../top_bar/top_bar_api.dart';
 
 abstract class AbstractView extends StatelessWidget {
   Widget? get mobile;

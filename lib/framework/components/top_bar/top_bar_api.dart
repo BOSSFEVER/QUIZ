@@ -1,5 +1,3 @@
-part of 'package:quiz/framework/framework.dart';
-
 abstract class TopBarApi {
   void setTitle(String title);
 

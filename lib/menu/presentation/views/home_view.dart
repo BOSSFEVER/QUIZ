@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:quiz/framework/framework.dart';
 
 import '../widgets/big_splash_button/big_splash_button.dart';

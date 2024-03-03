@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz/framework/framework.dart';
 
-import '../../config.dart';
+import '../../routes.dart';
 
 class HostView extends AbstractView {
   const HostView({super.key})

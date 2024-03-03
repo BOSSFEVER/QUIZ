@@ -1,5 +1,5 @@
 import 'package:quiz/framework/framework.dart';
-import 'package:quiz/menu/config.dart' as menu;
+import 'package:quiz/menu/init.dart' as menu;
 
 class QuizApplication extends Application {
   @override

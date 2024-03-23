@@ -6,6 +6,8 @@ import 'package:vrouter/vrouter.dart';
 
 /// The TopBar is our highly customized AppBar, which can be changed by using the [TopBarApi] via the [BuildContext.get] method.
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
+  const TopBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TopBarCubit, TopBarState>(

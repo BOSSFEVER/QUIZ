@@ -4,16 +4,25 @@ import 'package:quiz/framework/app/start.dart';
 /// Extend this class and implement the [init] and [exit] methods.
 /// After that, instantiate this class `Application()` and the app will start.
 abstract class Application {
-  Application() {
-    start();
+  final ThemeData? themeData;
+  final String title;
+
+  Application({
+    this.themeData,
+    required this.title,
+  }) {
+    _start();
   }
 
   /// This method is run before the app starts.
   void init();
 
-  void start() {
+  void _start() {
     init();
 
-    runApp(const Start());
+    runApp(Start(
+      title: title,
+      themeData: themeData,
+    ));
   }
 }

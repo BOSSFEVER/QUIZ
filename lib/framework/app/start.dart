@@ -5,7 +5,14 @@ import 'package:quiz/framework/components/view/scaffold_wrapper.dart';
 import 'package:vrouter/vrouter.dart';
 
 class Start extends StatelessWidget {
-  const Start({super.key});
+  final ThemeData? themeData;
+  final String title;
+
+  const Start({
+    super.key,
+    this.themeData,
+    required this.title,
+  });
 
   // This widget is the root of your application.
   @override
@@ -21,13 +28,8 @@ class Start extends StatelessWidget {
           ),
         ],
         debugShowCheckedModeBanner: false,
-        title: 'BOSSFEVER QUIZ',
-        theme: ThemeData(
-          colorScheme: const ColorScheme.dark().copyWith(
-              background: const Color(0xFF191919),
-              surface: const Color(0xFF262626)),
-          useMaterial3: true,
-        ),
+        title: title,
+        theme: themeData,
         transitionDuration: const Duration(milliseconds: 100),
         reverseTransitionDuration: const Duration(milliseconds: 100),
         buildTransition: (anim1, anim2, child) =>

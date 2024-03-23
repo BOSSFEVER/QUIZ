@@ -14,7 +14,7 @@ class ScaffoldWrapper extends StatelessWidget {
     return BlocBuilder<TopBarCubit, TopBarState>(
       builder: (context, state) {
         return Scaffold(
-          appBar: state.visible ? TopBar() : null,
+          appBar: state.visible ? const TopBar() : null,
           body: child,
         );
       },
